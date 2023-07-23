@@ -54,10 +54,10 @@ class Graph extends Component<IProps, {}> {
       elem.setAttribute('row-pivots', '["timestamp"]');   // takes care of x-axis, mapping each datapoint based on its timestamp
       elem.setAttribute('columns', '["top_ask_price"]');  // allows us to focus on a particular part of a stock's data along the y-axis
       elem.setAttribute('aggregates',                           // allows us to handle the duplicated data we observed earlier and consolidate it into a single data point.
-          {"stock": "distinct count",
+          `{"stock": "distinct count",
           "top_ask_price":"avg",
           "top_bid_price":"avg",
-          "timestamp":"distinct count"});
+          "timestamp":"distinct count"}`);
     }
   }
 
